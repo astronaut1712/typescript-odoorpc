@@ -1,0 +1,35 @@
+{
+    "name": "odoorpc",
+    "version": "1.0.2",
+    "description": "OdooRPC for TS/JS client",
+    "main": "lib/odoorpc.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc lib/odoorpc.ts",
+        "dev": "webpack --config webpack.dev.config.js -w"
+    },
+    "types": "lib/odoorpc.d.ts",
+    "author": "Quang <quang.astronaut@gmail.com>",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/astronaut1712/typescript-odoorpc.git"
+    },
+    "keywords": [
+        "odoo",
+        "jsonrpc",
+        "odoorpc"
+    ],
+    "bugs": {
+        "url": "https://github.com/astronaut1712/typescript-odoorpc/issues"
+    },
+    "dependencies": {
+        "typescript": "^2.2.2",
+        "whatwg-fetch": "^2.0.3"
+    },
+    "devDependencies": {
+        "awesome-typescript-loader": "^3.1.3",
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0"
+    }
+}

@@ -1,0 +1,30 @@
+import 'whatwg-fetch';
+export declare class OdooRPC {
+    private odoo_server;
+    private http_auth;
+    private cookies;
+    private uniq_id_counter;
+    private shouldManageSessionId;
+    private context;
+    private headers;
+    private request_init;
+    constructor();
+    private buildRequest(url, params);
+    private handleOdooErrors(response);
+    private handleHttpErrors(response);
+    init(configs: any): void;
+    setOdooServer(odoo_server: string): void;
+    setHttpAuth(http_auth: string): void;
+    sendRequest(url: string, params: Object): Promise<any>;
+    getVersionInfo(): Promise<any>;
+    getVersionNumber(): Promise<number>;
+    getSessionInfo(): Promise<any>;
+    login(db: string, login: string, password: string): Promise<any>;
+    isLoggedIn(force?: boolean): Promise<boolean>;
+    logout(force?: boolean): Promise<any>;
+    getDbList(): Promise<any>;
+    searchRead(model: string, domain: any, fields: any, limit: number): Promise<any>;
+    updateContext(context: any): void;
+    getContext(): Object;
+    call(model: string, method: string, args: any, kwargs: any): Promise<any>;
+}
