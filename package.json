@@ -5,7 +5,7 @@
     "main": "lib/odoorpc.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc lib/odoorpc.ts",
+        "build": "tsc",
         "dev": "webpack --config webpack.dev.config.js -w"
     },
     "types": "lib/odoorpc.d.ts",

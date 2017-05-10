@@ -17,13 +17,13 @@ export declare class OdooRPC {
     setHttpAuth(http_auth: string): void;
     sendRequest(url: string, params: Object): Promise<any>;
     getVersionInfo(): Promise<any>;
-    getVersionNumber(): Promise<number>;
+    getVersionNumber(): Promise<any>;
     getSessionInfo(): Promise<any>;
     login(db: string, login: string, password: string): Promise<any>;
-    isLoggedIn(force?: boolean): Promise<boolean>;
+    isLoggedIn(force?: boolean): Promise<any>;
     logout(force?: boolean): Promise<any>;
     getDbList(): Promise<any>;
-    searchRead(model: string, domain: any, fields: any, limit: number): Promise<any>;
+    searchRead(model: string, domain: any, fields: any, limit?: number): Promise<any>;
     updateContext(context: any): void;
     getContext(): Object;
     call(model: string, method: string, args: any, kwargs: any): Promise<any>;

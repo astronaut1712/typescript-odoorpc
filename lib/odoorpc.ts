@@ -195,7 +195,7 @@ export class OdooRPC {
         }
     }
 
-    public getDbList() { // only use for odoo < 9.0
+    public getDbList() {
         return this.getVersionNumber().then(version => {
             console.log(version);
             if(version == 9) {
@@ -203,7 +203,7 @@ export class OdooRPC {
                 let params = {
                     "method": "list",
                     "service": "db",
-                    "args": []};
+                    "args": new Array()};
                 return this.sendRequest(url, params);
             }
             if(version > 9) {
@@ -213,7 +213,7 @@ export class OdooRPC {
         });
     }
 
-    public searchRead(model: string, domain: any, fields: any, limit: number) {
+    public searchRead(model: string, domain: any, fields: any, limit?: number) {
         let params = {
             model: model,
             domain: domain,
